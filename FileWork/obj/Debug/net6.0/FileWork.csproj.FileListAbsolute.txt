@@ -1,0 +1,12 @@
+/Users/ivan/RiderProjects/FileManagementBot/FileWork/bin/Debug/net6.0/FileWork.deps.json
+/Users/ivan/RiderProjects/FileManagementBot/FileWork/bin/Debug/net6.0/FileWork.dll
+/Users/ivan/RiderProjects/FileManagementBot/FileWork/bin/Debug/net6.0/FileWork.pdb
+/Users/ivan/RiderProjects/FileManagementBot/FileWork/obj/Debug/net6.0/FileWork.csproj.AssemblyReference.cache
+/Users/ivan/RiderProjects/FileManagementBot/FileWork/obj/Debug/net6.0/FileWork.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ivan/RiderProjects/FileManagementBot/FileWork/obj/Debug/net6.0/FileWork.AssemblyInfoInputs.cache
+/Users/ivan/RiderProjects/FileManagementBot/FileWork/obj/Debug/net6.0/FileWork.AssemblyInfo.cs
+/Users/ivan/RiderProjects/FileManagementBot/FileWork/obj/Debug/net6.0/FileWork.csproj.CoreCompileInputs.cache
+/Users/ivan/RiderProjects/FileManagementBot/FileWork/obj/Debug/net6.0/FileWork.dll
+/Users/ivan/RiderProjects/FileManagementBot/FileWork/obj/Debug/net6.0/refint/FileWork.dll
+/Users/ivan/RiderProjects/FileManagementBot/FileWork/obj/Debug/net6.0/FileWork.pdb
+/Users/ivan/RiderProjects/FileManagementBot/FileWork/obj/Debug/net6.0/ref/FileWork.dll

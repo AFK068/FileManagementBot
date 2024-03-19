@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileManagementBot", "FileManagementBot\FileManagementBot.csproj", "{A37E4D7D-515C-47F4-9594-7B0A3BB55B35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileWork", "FileWork\FileWork.csproj", "{B5566EE3-8477-4541-8609-DA87DC8DF6B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A37E4D7D-515C-47F4-9594-7B0A3BB55B35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A37E4D7D-515C-47F4-9594-7B0A3BB55B35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A37E4D7D-515C-47F4-9594-7B0A3BB55B35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A37E4D7D-515C-47F4-9594-7B0A3BB55B35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5566EE3-8477-4541-8609-DA87DC8DF6B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5566EE3-8477-4541-8609-DA87DC8DF6B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5566EE3-8477-4541-8609-DA87DC8DF6B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5566EE3-8477-4541-8609-DA87DC8DF6B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

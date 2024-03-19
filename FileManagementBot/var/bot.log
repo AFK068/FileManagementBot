@@ -1,0 +1,224 @@
+2024-03-19 13:29:57.607 +03:00 [INF] ad
+2024-03-19 13:37:54.445 +03:00 [INF] ad
+2024-03-19 13:37:54.463 +03:00 [ERR] Errororoor
+2024-03-19 14:11:56.591 +03:00 [INF] 0 File sent.
+2024-03-19 14:14:37.168 +03:00 [INF] Message chat id : 0 ; File name - Updated data.json : File sent by user.
+2024-03-19 14:14:39.179 +03:00 [INF] Message chat id : 0 ; File name - Updated data.csv ; File sent by user.
+2024-03-19 14:34:24.612 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Sorting
+2024-03-19 14:34:29.156 +03:00 [INF] Bot id : 6429131594 ; The user clicked: UniversalSort
+2024-03-19 14:34:33.147 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 14:34:39.639 +03:00 [INF] Bot id : 6429131594 ; The user clicked: UniversalSort
+2024-03-19 14:34:43.743 +03:00 [INF] Bot id : 6429131594 ; The user clicked: UniversalSortField_Id
+2024-03-19 14:34:49.306 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 14:34:51.150 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 14:34:52.259 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 14:34:58.213 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Filtration
+2024-03-19 14:34:59.670 +03:00 [INF] Bot id : 6429131594 ; The user clicked: FilterDistrict
+2024-03-19 14:35:01.076 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 14:35:02.406 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Filtration
+2024-03-19 14:35:03.456 +03:00 [INF] Bot id : 6429131594 ; The user clicked: MoreDetailedFiltering
+2024-03-19 14:35:04.283 +03:00 [INF] Bot id : 6429131594 ; The user clicked: UniversalFilterField_Id
+2024-03-19 14:35:05.231 +03:00 [INF] Bot id : 6429131594 ; The user clicked: UniversalFilterSecondField_FullName
+2024-03-19 14:55:26.294 +03:00 [INF] Bot id : 6429131594 ; User sent a message : фыв 
+2024-03-19 14:56:55.636 +03:00 [INF] Bot id : 6429131594 ; User sent a message : asd 
+2024-03-19 14:56:58.744 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /start 
+2024-03-19 14:57:10.652 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Sorting
+2024-03-19 14:57:13.785 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 14:57:14.818 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Filtration
+2024-03-19 14:57:15.970 +03:00 [INF] Bot id : 6429131594 ; The user clicked: FilterDistrict
+2024-03-19 14:57:17.595 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 14:57:18.885 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Filtration
+2024-03-19 14:57:20.260 +03:00 [INF] Bot id : 6429131594 ; The user clicked: MoreDetailedFiltering
+2024-03-19 14:57:21.110 +03:00 [INF] Bot id : 6429131594 ; The user clicked: UniversalFilterField_Id
+2024-03-19 14:57:23.417 +03:00 [INF] Bot id : 6429131594 ; The user clicked: UniversalFilterTheSameField
+2024-03-19 14:57:24.460 +03:00 [INF] Bot id : 6429131594 ; User sent a message for filtering : 1 
+2024-03-19 15:30:46.846 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Filtration
+2024-03-19 15:30:53.435 +03:00 [INF] Bot id : 6429131594 ; The user clicked: MoreDetailedFiltering
+2024-03-19 15:30:55.257 +03:00 [INF] Bot id : 6429131594 ; The user clicked: UniversalFilterField_Id
+2024-03-19 15:30:57.625 +03:00 [INF] Bot id : 6429131594 ; The user clicked: UniversalFilterSecondField_GeodataCenter
+2024-03-19 15:30:59.391 +03:00 [INF] Bot id : 6429131594 ; User sent a message for filtering : 12
+12 
+2024-03-19 15:31:08.880 +03:00 [INF] Bot id : 6429131594 ; User sent a message for filtering : 12
+ыв 
+2024-03-19 15:34:05.892 +03:00 [INF] Bot id : 6429131594 ; User sent a document : Telegram.Bot.Types.Document 
+2024-03-19 15:34:19.498 +03:00 [INF] Bot id : 6429131594 ; User sent a document : gas-station.csv 
+2024-03-19 15:40:13.756 +03:00 [INF] Bot id : 6429131594 ; User sent a message : as 
+2024-03-19 15:40:17.112 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /start 
+2024-03-19 15:40:19.123 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /help 
+2024-03-19 15:40:25.060 +03:00 [INF] Bot id : 6429131594 ; User sent a document : gas-station.csv 
+2024-03-19 15:40:27.733 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Sorting
+2024-03-19 15:40:31.446 +03:00 [INF] Bot id : 6429131594 ; User sent a message : фыв 
+2024-03-19 15:40:35.972 +03:00 [INF] Bot id : 6429131594 ; User sent a message : фыв 
+2024-03-19 15:41:02.116 +03:00 [INF] Bot id : 6429131594 ; User sent a message : тьб 
+2024-03-19 15:41:03.309 +03:00 [INF] Bot id : 6429131594 ; User sent a message : л 
+2024-03-19 15:41:08.810 +03:00 [INF] Bot id : 6429131594 ; User sent a document : gas-station.csv 
+2024-03-19 15:41:40.150 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Filtration
+2024-03-19 15:42:10.518 +03:00 [INF] Bot id : 6429131594 ; User sent a message : ол 
+2024-03-19 15:43:09.680 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /help 
+2024-03-19 15:43:16.273 +03:00 [INF] Bot id : 6429131594 ; User sent a document : gas-station.csv 
+2024-03-19 15:43:25.011 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Filtration
+2024-03-19 15:43:26.238 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 15:43:27.587 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Sorting
+2024-03-19 15:43:30.389 +03:00 [INF] Bot id : 6429131594 ; The user clicked: SortAscending
+2024-03-19 15:43:32.877 +03:00 [INF] Message chat id : 0 ; File name - "Updated data.json" : File sent by user.
+2024-03-19 15:43:32.878 +03:00 [INF] Bot id : 6429131594 ; The user clicked: JSON
+2024-03-19 15:44:39.939 +03:00 [INF] Bot id : 6429131594 ; User sent a document : gas-station.csv 
+2024-03-19 15:44:43.439 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Filtration
+2024-03-19 15:44:45.758 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 15:44:47.168 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Sorting
+2024-03-19 15:44:49.443 +03:00 [INF] Bot id : 6429131594 ; The user clicked: UniversalSort
+2024-03-19 15:44:51.815 +03:00 [INF] Bot id : 6429131594 ; The user clicked: UniversalSortField_Id
+2024-03-19 15:44:53.977 +03:00 [INF] Bot id : 6429131594 ; The user clicked: SortAscendingForUniversalSide
+2024-03-19 15:44:58.061 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 15:45:00.474 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 15:45:02.494 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 15:45:09.834 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 15:45:11.258 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Filtration
+2024-03-19 15:45:15.287 +03:00 [INF] Bot id : 6429131594 ; The user clicked: MoreDetailedFiltering
+2024-03-19 15:45:19.408 +03:00 [INF] Bot id : 6429131594 ; The user clicked: UniversalFilterField_Id
+2024-03-19 15:45:24.446 +03:00 [INF] Bot id : 6429131594 ; The user clicked: UniversalFilterSecondField_GlobalId
+2024-03-19 15:45:29.731 +03:00 [INF] Bot id : 6429131594 ; The user clicked: UniversalFilterTheSameField
+2024-03-19 15:45:33.380 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 15:45:34.977 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 15:45:36.269 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 15:48:20.980 +03:00 [INF] Bot id : 6429131594 ; User sent a document : gas-station.csv 
+2024-03-19 15:50:24.718 +03:00 [INF] Bot id : 6429131594 ; User sent a message : 123 
+2024-03-19 15:50:26.231 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /start 
+2024-03-19 15:50:28.122 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /help 
+2024-03-19 15:50:33.370 +03:00 [INF] Bot id : 6429131594 ; User sent a message : 🤮 
+2024-03-19 15:50:39.052 +03:00 [INF] Bot id : 6429131594 ; User sent a document : template.typ 
+2024-03-19 15:50:44.860 +03:00 [INF] Bot id : 6429131594 ; User sent a document : gas-station.csv 
+2024-03-19 15:50:47.519 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Sorting
+2024-03-19 15:50:50.463 +03:00 [INF] Bot id : 6429131594 ; The user clicked: SortAscending
+2024-03-19 15:50:53.533 +03:00 [INF] Message chat id : 0 ; File sent by user. ; File name - "Updated data.json"
+2024-03-19 15:50:53.534 +03:00 [INF] Bot id : 6429131594 ; The user clicked: JSON
+2024-03-19 15:51:00.280 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 15:51:04.292 +03:00 [INF] Bot id : 6429131594 ; The user clicked: SortDescending
+2024-03-19 15:56:17.052 +03:00 [INF] Bot id : 6429131594 ; User sent a document : gas-station.csv 
+2024-03-19 15:56:20.907 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Sorting
+2024-03-19 15:56:23.775 +03:00 [INF] Bot id : 6429131594 ; The user clicked: SortTestDateAscending
+2024-03-19 15:56:28.674 +03:00 [INF] Message chat id : 0 ; File sent by user. ; File name - "Updated data.json"
+2024-03-19 15:56:28.675 +03:00 [INF] Bot id : 6429131594 ; The user clicked: SendJSONFile
+2024-03-19 15:56:48.028 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 15:56:49.653 +03:00 [INF] Bot id : 6429131594 ; The user clicked: SortTestDateDescending
+2024-03-19 15:56:53.566 +03:00 [INF] Message chat id : 0 ; File sent by user. ; File name - "Updated data.csv"
+2024-03-19 15:56:53.566 +03:00 [INF] Bot id : 6429131594 ; The user clicked: SendCSVFile
+2024-03-19 15:57:18.823 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 15:57:23.988 +03:00 [INF] Bot id : 6429131594 ; The user clicked: UniversalSort
+2024-03-19 15:57:29.510 +03:00 [INF] Bot id : 6429131594 ; The user clicked: UniversalSortField_Id
+2024-03-19 15:57:35.945 +03:00 [INF] Bot id : 6429131594 ; The user clicked: SortAscendingForUniversalSide
+2024-03-19 15:57:52.504 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 15:57:54.133 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 15:57:56.038 +03:00 [INF] Bot id : 6429131594 ; The user clicked: UniversalSortField_GlobalId
+2024-03-19 15:58:00.889 +03:00 [INF] Bot id : 6429131594 ; The user clicked: SortDescendingForUniversalSide
+2024-03-19 15:58:07.664 +03:00 [INF] Message chat id : 0 ; File sent by user. ; File name - "Updated data.json"
+2024-03-19 15:58:07.664 +03:00 [INF] Bot id : 6429131594 ; The user clicked: SendJSONFile
+2024-03-19 15:58:26.806 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 15:58:28.212 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 15:58:46.613 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 15:58:48.183 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 15:58:50.929 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Filtration
+2024-03-19 15:58:54.852 +03:00 [INF] Bot id : 6429131594 ; The user clicked: MoreDetailedFiltering
+2024-03-19 15:59:01.023 +03:00 [INF] Bot id : 6429131594 ; The user clicked: UniversalFilterField_Id
+2024-03-19 15:59:06.878 +03:00 [INF] Bot id : 6429131594 ; The user clicked: UniversalFilterSecondField_Id
+2024-03-19 15:59:22.944 +03:00 [INF] Bot id : 6429131594 ; User sent a message for filtering : 7 
+2024-03-19 15:59:26.505 +03:00 [INF] Message chat id : 0 ; File sent by user. ; File name - "Updated data.csv"
+2024-03-19 15:59:26.506 +03:00 [INF] Bot id : 6429131594 ; The user clicked: SendCSVFile
+2024-03-19 15:59:27.766 +03:00 [INF] Message chat id : 0 ; File sent by user. ; File name - "Updated data.json"
+2024-03-19 15:59:27.767 +03:00 [INF] Bot id : 6429131594 ; The user clicked: SendJSONFile
+2024-03-19 15:59:50.479 +03:00 [INF] Bot id : 6429131594 ; User sent a document : gas-station.csv 
+2024-03-19 16:11:00.755 +03:00 [INF] Bot id : 6429131594 ; User sent a document : gas-station.csv 
+2024-03-19 16:11:03.289 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Filtration
+2024-03-19 16:11:04.947 +03:00 [INF] Bot id : 6429131594 ; The user clicked: FilterDistrict
+2024-03-19 16:11:06.100 +03:00 [ERR] Bot id : 6429131594 ; Error while searching for a suitable object ; Message from user : nm, 
+2024-03-19 16:11:06.352 +03:00 [INF] Bot id : 6429131594 ; User sent a message for filtering : nm, 
+2024-03-19 16:11:11.909 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 16:11:13.106 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Filtration
+2024-03-19 16:11:14.444 +03:00 [INF] Bot id : 6429131594 ; The user clicked: MoreDetailedFiltering
+2024-03-19 16:11:15.559 +03:00 [INF] Bot id : 6429131594 ; The user clicked: UniversalFilterField_Id
+2024-03-19 16:11:18.054 +03:00 [INF] Bot id : 6429131594 ; The user clicked: UniversalFilterTheSameField
+2024-03-19 16:11:19.109 +03:00 [ERR] Bot id : 6429131594 ; Error while searching for a suitable object ; Message from user : m 
+2024-03-19 16:11:19.229 +03:00 [INF] Bot id : 6429131594 ; User sent a message for filtering : m 
+2024-03-19 16:13:56.046 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 16:13:56.930 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 16:13:58.645 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 16:14:00.946 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Filtration
+2024-03-19 16:14:03.768 +03:00 [INF] Bot id : 6429131594 ; The user clicked: FilterDistrict
+2024-03-19 16:14:06.049 +03:00 [ERR] Bot id : 6429131594 ; Error while searching for a suitable object ; Message from user : l 
+2024-03-19 16:14:06.176 +03:00 [INF] Bot id : 6429131594 ; User sent a message for filtering : l 
+2024-03-19 16:26:19.054 +03:00 [INF] Bot id : 6429131594 ; User sent a document : gas-station.csv 
+2024-03-19 16:26:30.083 +03:00 [INF] Bot id : 6429131594 ; User sent a document : gas-station.csv 
+2024-03-19 16:26:30.712 +03:00 [ERR] Bot id : 6429131594 ; Error while processing file. ; File path : documents/file_531.csv 
+2024-03-19 16:34:43.186 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /start 
+2024-03-19 16:35:03.208 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /start 
+2024-03-19 16:38:09.527 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /start 
+2024-03-19 16:38:36.339 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /help 
+2024-03-19 16:40:12.694 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /рудз 
+2024-03-19 16:40:14.410 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /help 
+2024-03-19 16:40:42.294 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /help 
+2024-03-19 16:41:57.412 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /help 
+2024-03-19 16:47:58.301 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /help 
+2024-03-19 16:48:36.723 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /help 
+2024-03-19 16:49:01.441 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /help 
+2024-03-19 16:49:01.710 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /help 
+2024-03-19 16:50:43.209 +03:00 [INF] Bot id : 6429131594 ; User sent a document : gas-station.csv 
+2024-03-19 16:50:43.948 +03:00 [ERR] Bot id : 6429131594 ; Error while processing file. ; File path : documents/file_532.csv 
+2024-03-19 16:52:22.769 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /help 
+2024-03-19 16:53:59.168 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /help 
+2024-03-19 16:56:27.178 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /help 
+2024-03-19 17:00:24.933 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /help 
+2024-03-19 17:00:38.544 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /start 
+2024-03-19 17:04:55.323 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /start 
+2024-03-19 17:04:55.616 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /help 
+2024-03-19 17:05:21.717 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /start 
+2024-03-19 17:05:34.604 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /help 
+2024-03-19 17:07:57.633 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /help 
+2024-03-19 17:09:18.246 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /start 
+2024-03-19 17:37:17.231 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /help 
+2024-03-19 17:37:17.431 +03:00 [INF] Bot id : 6429131594 ; User sent a message : /start 
+2024-03-19 17:37:19.457 +03:00 [INF] Bot id : 6429131594 ; User sent a message : asda 
+2024-03-19 17:37:24.335 +03:00 [INF] Bot id : 6429131594 ; User sent a document : gas-station.csv 
+2024-03-19 17:37:28.968 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Sorting
+2024-03-19 17:37:32.947 +03:00 [INF] Bot id : 6429131594 ; The user clicked: SortTestDateAscending
+2024-03-19 17:37:38.008 +03:00 [INF] Message chat id : 0 ; File sent by user. ; File name - "Updated data.json"
+2024-03-19 17:37:38.008 +03:00 [INF] Bot id : 6429131594 ; The user clicked: SendJSONFile
+2024-03-19 17:37:42.383 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 17:37:46.270 +03:00 [INF] Bot id : 6429131594 ; The user clicked: UniversalSort
+2024-03-19 17:37:50.927 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 17:37:52.031 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 17:37:53.811 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Filtration
+2024-03-19 17:37:55.889 +03:00 [INF] Bot id : 6429131594 ; The user clicked: MoreDetailedFiltering
+2024-03-19 17:37:58.399 +03:00 [INF] Bot id : 6429131594 ; The user clicked: UniversalFilterField_Geoarea
+2024-03-19 17:38:01.134 +03:00 [INF] Bot id : 6429131594 ; The user clicked: UniversalFilterSecondField_Geoarea
+2024-03-19 17:38:14.072 +03:00 [ERR] Bot id : 6429131594 ; Error while searching for a suitable object ; Message from user : ooijokjklj;lkjlkj;klj; 
+2024-03-19 17:38:14.376 +03:00 [INF] Bot id : 6429131594 ; User sent a message for filtering : ooijokjklj;lkjlkj;klj; 
+2024-03-19 17:38:27.806 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 17:38:32.880 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 17:38:33.776 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 17:45:38.834 +03:00 [INF] Bot id : 6429131594 ; User sent a document : gas-station.csv 
+2024-03-19 17:45:40.660 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Filtration
+2024-03-19 17:45:44.608 +03:00 [INF] Bot id : 6429131594 ; The user clicked: FilterDistrict
+2024-03-19 17:45:45.752 +03:00 [ERR] Bot id : 6429131594 ; Error while searching for a suitable object ; Message from user : бь 
+2024-03-19 17:45:45.851 +03:00 [INF] Bot id : 6429131594 ; User sent a message for filtering : бь 
+2024-03-19 17:46:09.662 +03:00 [INF] Bot id : 6429131594 ; User sent a document : gas-station.csv 
+2024-03-19 17:46:12.327 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Filtration
+2024-03-19 17:46:13.508 +03:00 [INF] Bot id : 6429131594 ; The user clicked: FilterDistrict
+2024-03-19 17:46:14.541 +03:00 [ERR] Bot id : 6429131594 ; Error while searching for a suitable object ; Message from user : ., 
+2024-03-19 17:46:14.915 +03:00 [INF] Bot id : 6429131594 ; User sent a message for filtering : ., 
+2024-03-19 17:46:17.645 +03:00 [INF] Bot id : 6429131594 ; The user clicked: FilterOwner
+2024-03-19 17:46:18.597 +03:00 [ERR] Bot id : 6429131594 ; Error while searching for a suitable object ; Message from user : m 
+2024-03-19 17:46:18.739 +03:00 [INF] Bot id : 6429131594 ; User sent a message for filtering : m 
+2024-03-19 17:46:19.836 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Back
+2024-03-19 17:46:21.366 +03:00 [INF] Bot id : 6429131594 ; The user clicked: Filtration
+2024-03-19 17:46:22.821 +03:00 [INF] Bot id : 6429131594 ; The user clicked: MoreDetailedFiltering
+2024-03-19 17:46:23.975 +03:00 [INF] Bot id : 6429131594 ; The user clicked: UniversalFilterField_Id
+2024-03-19 17:46:25.202 +03:00 [INF] Bot id : 6429131594 ; The user clicked: UniversalFilterSecondField_Id
+2024-03-19 17:46:28.184 +03:00 [ERR] Bot id : 6429131594 ; Error while searching for a suitable object ; Message from user : 909009 
+2024-03-19 17:46:28.340 +03:00 [INF] Bot id : 6429131594 ; User sent a message for filtering : 909009 
+2024-03-19 17:46:30.518 +03:00 [INF] Bot id : 6429131594 ; The user clicked: UniversalFilterSecondField_Owner
+2024-03-19 17:46:32.996 +03:00 [ERR] Bot id : 6429131594 ; Error while searching for a suitable object ; Message from user : 79 
+2024-03-19 17:46:33.089 +03:00 [INF] Bot id : 6429131594 ; User sent a message for filtering : 79 
+2024-03-19 17:46:40.178 +03:00 [ERR] Bot id : 6429131594 ; Error while searching for a suitable object ; Message from user : 12
+12 
+2024-03-19 17:46:40.400 +03:00 [INF] Bot id : 6429131594 ; User sent a message for filtering : 12
+12 
