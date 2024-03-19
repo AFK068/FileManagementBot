@@ -88,6 +88,19 @@ public class ProcessingUserData
             await SendInformationAboutWrongInput(botClient, message);
         }
     }
+
+    internal async Task HandleMessageInMenu(ITelegramBotClient botClient, Message message)
+    {
+        if (message.Text == "/help")
+        {
+            await botClient.SendTextMessageAsync(message.Chat.Id, _stringForMessageHelp);
+        }
+        else
+        {
+            await botClient.SendTextMessageAsync(message.Chat.Id,"\ud83d\uded1 Вы начали взаимодействие с меню, ваши сообщения не обрабатываются.\n\n" +
+                                                                 "\ud83d\udd04 Если хотите посмотреть инструкции по использованию отправьте сообщение /help");
+        }
+    }
     
     /// <summary>
     /// Handles messages sent by the user for filtering.
