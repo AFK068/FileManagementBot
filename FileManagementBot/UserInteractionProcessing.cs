@@ -79,6 +79,7 @@ internal class UserInteractionProcessing
             catch (Exception ex)
             {
                 Logging.GetLogger()!.LogError("Bot id : {0} ; Error while processing file. ; File path : {1} ", botClient.BotId, filePath);
+                TelegramBotLogics.сurrentState = TelegramBotLogics.StatesEnum.Message;
                 await botClient.SendTextMessageAsync(update.Message.Chat.Id, ex.Message, cancellationToken: cancellationToken);
             }
         }
