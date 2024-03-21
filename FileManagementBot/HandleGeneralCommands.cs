@@ -50,8 +50,8 @@ internal class HandleGeneralCommands
     /// <param name="message">The message received from the user.</param>
     internal async Task HandleSortAscending(ITelegramBotClient botClient, Message message)
     {
-        UserStateManager.GetInstance().usersGasStationsLastUpdate[message.Chat.Id] = 
-            DataManager.GetInstance().SortObjects(UserStateManager.GetInstance().usersGasStationObjects[message.Chat.Id], DataManager.GasStationEnum.TestDate);
+        UserStateManager.GetInstance().UsersGasStationsLastUpdate[message.Chat.Id] = 
+            DataManager.GetInstance().SortObjects(UserStateManager.GetInstance().UsersGasStationObjects[message.Chat.Id], DataManager.GasStationEnum.TestDate);
         
         await HandleInlineKeyboard.GetInstance().ProvideChoiceFileFormatForSort(botClient, message);
     }
@@ -63,8 +63,8 @@ internal class HandleGeneralCommands
     /// <param name="message">The message received from the user.</param>
     internal async Task HandleSortDescending(ITelegramBotClient botClient, Message message)
     {
-        UserStateManager.GetInstance().usersGasStationsLastUpdate[message.Chat.Id] = 
-            DataManager.GetInstance().SortObjects(UserStateManager.GetInstance().usersGasStationObjects[message.Chat.Id], DataManager.GasStationEnum.TestDate, true);
+        UserStateManager.GetInstance().UsersGasStationsLastUpdate[message.Chat.Id] = 
+            DataManager.GetInstance().SortObjects(UserStateManager.GetInstance().UsersGasStationObjects[message.Chat.Id], DataManager.GasStationEnum.TestDate, true);
         
         await HandleInlineKeyboard.GetInstance().ProvideChoiceFileFormatForSort(botClient, message);
     }
@@ -119,7 +119,7 @@ internal class HandleGeneralCommands
     /// <param name="message">The message received from the user.</param>
     internal async Task HandleSendJsonFile(ITelegramBotClient botClient, Message message)
     {
-        await DocumentProcessing.SendDocumentJsonFile(botClient, message, UserStateManager.GetInstance().usersGasStationsLastUpdate[message.Chat.Id]);
+        await DocumentProcessing.SendDocumentJsonFile(botClient, message, UserStateManager.GetInstance().UsersGasStationsLastUpdate[message.Chat.Id]);
     }
 
     /// <summary>
@@ -129,7 +129,7 @@ internal class HandleGeneralCommands
     /// <param name="message">The message received from the user.</param>
     internal async Task HandleSendCsvFile(ITelegramBotClient botClient, Message message)
     {
-        await DocumentProcessing.SendDocumentCsvFile(botClient, message, UserStateManager.GetInstance().usersGasStationsLastUpdate[message.Chat.Id]);
+        await DocumentProcessing.SendDocumentCsvFile(botClient, message, UserStateManager.GetInstance().UsersGasStationsLastUpdate[message.Chat.Id]);
     }
     
     /// <summary>
@@ -155,9 +155,9 @@ internal class HandleGeneralCommands
     {
         await HandleInlineKeyboard.GetInstance().ProvideChoiceFileFormatForSort(botClient, message);
 
-        UserStateManager.GetInstance().usersGasStationsLastUpdate[message.Chat.Id] = 
-            DataManager.GetInstance().SortObjects(UserStateManager.GetInstance().usersGasStationObjects[message.Chat.Id], 
-            UserStateManager.GetInstance().usersLastFieldForSort[message.Chat.Id], reverse);
+        UserStateManager.GetInstance().UsersGasStationsLastUpdate[message.Chat.Id] = 
+            DataManager.GetInstance().SortObjects(UserStateManager.GetInstance().UsersGasStationObjects[message.Chat.Id], 
+            UserStateManager.GetInstance().UsersLastFieldForSort[message.Chat.Id], reverse);
     }
 
     /// <summary>
@@ -169,8 +169,8 @@ internal class HandleGeneralCommands
     internal async Task HandleSortSide(ITelegramBotClient botClient, Message message, DataManager.GasStationEnum field)
     {
         await HandleInlineKeyboard.GetInstance().ProvideChoiceSortSide(botClient, message);
-        UserStateManager.GetInstance().usersGasStationsLastUpdate[message.Chat.Id] = 
-            DataManager.GetInstance().SortObjects(UserStateManager.GetInstance().usersGasStationObjects[message.Chat.Id], field, true);
+        UserStateManager.GetInstance().UsersGasStationsLastUpdate[message.Chat.Id] = 
+            DataManager.GetInstance().SortObjects(UserStateManager.GetInstance().UsersGasStationObjects[message.Chat.Id], field, true);
         
         UserStateManager.GetInstance().GetUserLastFieldForSort(message.Chat.Id, field);
     }

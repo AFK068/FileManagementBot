@@ -14,7 +14,6 @@ internal class UserInteractionProcessing
     private DataManager.GasStationEnum[] _fieldsOfGasStation = ((DataManager.GasStationEnum[])Enum.GetValues(typeof(DataManager.GasStationEnum)))
         .Take(Enum.GetValues(typeof(DataManager.GasStationEnum)).Length - 2).ToArray();
     
-    
     /// <summary>
     /// Generates a handler for universal filter field.
     /// </summary>
@@ -78,7 +77,7 @@ internal class UserInteractionProcessing
             }
             catch (Exception ex)
             {
-                Logging.GetLogger()!.LogError("Bot id : {0} ; Error while processing file. ; File path : {1} ", botClient.BotId, filePath);
+                Logging.GetLogger()!.LogError("Message chat id : {0} ; Error while processing file. ; File path : {1} ", update.Message.Chat.Id, filePath);
                 
                 // Change the state.
                 UserStateManager.GetInstance().UsersStates[update.Message.Chat.Id] = TelegramBotLogics.StatesEnum.Message;
@@ -132,7 +131,7 @@ internal class UserInteractionProcessing
             { "MoreDetailedFiltering", HandleUniversalFilterCommands.GetInstance().HandleMoreDetailedFiltering },
             {
                 "UniversalFilterTheSameField", (botClient, message) => 
-                    HandleUniversalFilterCommands.GetInstance().HandleSecondFieldMoreDetailedFiltering(botClient, message, HandleUniversalFilterCommands.s_firstFilterField)
+                    HandleUniversalFilterCommands.GetInstance().HandleSecondFieldMoreDetailedFiltering(botClient, message, UserStateManager.GetInstance().UsersGasStationFirstEnumForFilter[message.Chat.Id])
             }
         };
         
@@ -160,7 +159,7 @@ internal class UserInteractionProcessing
             try
             {
                 await handler(botClient, callbackQuery.Message!);
-                Logging.GetLogger()!.LogInformation("Bot id : {0} ; The user clicked: {1}", botClient.BotId, callbackQuery.Data);
+                Logging.GetLogger()!.LogInformation("Message chat id : {0} ; The user clicked: {1}", callbackQuery.Message.Chat.Id, callbackQuery.Data);
             }
             catch (Exception ex)
             {

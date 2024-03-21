@@ -13,19 +13,19 @@ internal class UserStateManager
     internal Dictionary<long, TelegramBotLogics.StatesEnum> UsersStates { get; set; } = new Dictionary<long, TelegramBotLogics.StatesEnum>();
     
     // Dictionary containing user chat IDs and their last field for sorting.
-    internal Dictionary<long, DataManager.GasStationEnum> usersLastFieldForSort { get; set; } = new Dictionary<long, DataManager.GasStationEnum>();
+    internal Dictionary<long, DataManager.GasStationEnum> UsersLastFieldForSort { get; set; } = new Dictionary<long, DataManager.GasStationEnum>();
     
     // Dictionary containing user chat IDs and their gas station objects.
-    internal  Dictionary<long, List<GasStation>> usersGasStationObjects { get; set; } = new Dictionary<long, List<GasStation>>();
+    internal  Dictionary<long, List<GasStation>> UsersGasStationObjects { get; set; } = new Dictionary<long, List<GasStation>>();
     
     // Dictionary containing user chat IDs and their gas stations' last update.
-    internal Dictionary<long, List<GasStation>> usersGasStationsLastUpdate{ get; set; } = new Dictionary<long, List<GasStation>>();
+    internal Dictionary<long, List<GasStation>> UsersGasStationsLastUpdate{ get; set; } = new Dictionary<long, List<GasStation>>();
     
     // Dictionary containing user chat IDs and their second gas station enum.
-    internal Dictionary<long, DataManager.GasStationEnum> usersgasStationSecondEnumForFilter { get; set; } = new Dictionary<long, DataManager.GasStationEnum>();
+    internal Dictionary<long, DataManager.GasStationEnum> UsersGasStationSecondEnumForFilter { get; set; } = new Dictionary<long, DataManager.GasStationEnum>();
     
     // Dictionary containing user chat IDs and their first gas station enum.
-    internal Dictionary<long, DataManager.GasStationEnum> usersgasStationFirstEnumForFilter { get; set; } = new Dictionary<long, DataManager.GasStationEnum>();
+    internal Dictionary<long, DataManager.GasStationEnum> UsersGasStationFirstEnumForFilter { get; set; } = new Dictionary<long, DataManager.GasStationEnum>();
     
     /// <summary>
     /// Gets the singleton instance of UserStateManager.
@@ -61,13 +61,13 @@ internal class UserStateManager
     /// <param name="field">The last field used for sorting.</param>
     internal void GetUserLastFieldForSort(long chatId, DataManager.GasStationEnum field)
     {
-        if (!usersLastFieldForSort.ContainsKey(chatId))
+        if (!UsersLastFieldForSort.ContainsKey(chatId))
         {
-            usersLastFieldForSort.Add(chatId, field);
+            UsersLastFieldForSort.Add(chatId, field);
         }
 
         {
-            usersLastFieldForSort[chatId] = field;
+            UsersLastFieldForSort[chatId] = field;
         }
     }
     
@@ -78,13 +78,13 @@ internal class UserStateManager
     /// <param name="gasStations">List of gas stations associated with the user.</param>
     internal void GetUserGasStationObjects(long chatId, List<GasStation> gasStations)
     {
-        if (!usersGasStationObjects.ContainsKey(chatId))
+        if (!UsersGasStationObjects.ContainsKey(chatId))
         {
-            usersGasStationObjects.Add(chatId, gasStations);
+            UsersGasStationObjects.Add(chatId, gasStations);
         }
         else
         {
-            usersGasStationObjects[chatId] = gasStations;
+            UsersGasStationObjects[chatId] = gasStations;
         }
     }
     
@@ -95,13 +95,13 @@ internal class UserStateManager
     /// <param name="gasStations">List of gas stations last updated for the user.</param>
     internal void GetUserGasStationsLastUpdate(long chatId, List<GasStation> gasStations)
     {
-        if (!usersGasStationsLastUpdate.ContainsKey(chatId))
+        if (!UsersGasStationsLastUpdate.ContainsKey(chatId))
         {
-            usersGasStationsLastUpdate.Add(chatId, gasStations);
+            UsersGasStationsLastUpdate.Add(chatId, gasStations);
         }
         else
         {
-            usersGasStationsLastUpdate[chatId] = gasStations;
+            UsersGasStationsLastUpdate[chatId] = gasStations;
         }
     }
     
@@ -112,13 +112,13 @@ internal class UserStateManager
     /// <param name="field">The second gas station enum for the user.</param>
     internal void GetUserGasStationSecondEnum(long chatId, DataManager.GasStationEnum field)
     {
-        if (!usersgasStationSecondEnumForFilter.ContainsKey(chatId))
+        if (!UsersGasStationSecondEnumForFilter.ContainsKey(chatId))
         {
-            usersgasStationSecondEnumForFilter.Add(chatId, field);
+            UsersGasStationSecondEnumForFilter.Add(chatId, field);
         }
         
         {
-            usersgasStationSecondEnumForFilter[chatId] = field;
+            UsersGasStationSecondEnumForFilter[chatId] = field;
         }
     }
     
@@ -129,13 +129,13 @@ internal class UserStateManager
     /// <param name="field">The first gas station enum for the user.</param>
     internal void GetUserGasStationFirstEnum(long chatId, DataManager.GasStationEnum field)
     {
-        if (!usersgasStationFirstEnumForFilter.ContainsKey(chatId))
+        if (!UsersGasStationFirstEnumForFilter.ContainsKey(chatId))
         {
-            usersgasStationFirstEnumForFilter.Add(chatId, field);
+            UsersGasStationFirstEnumForFilter.Add(chatId, field);
         }
         
         {
-            usersgasStationFirstEnumForFilter[chatId] = field;
+            UsersGasStationFirstEnumForFilter[chatId] = field;
         }
     }
 }

@@ -10,10 +10,10 @@ namespace FileManagementBot;
 internal class Logging
 {
     // The service provider for managing dependencies.
-    private static ServiceProvider _serviceProvider;
+    private static ServiceProvider s_serviceProvider;
     
     // The logger instance for logging messages.
-    private static ILogger? _logger;
+    private static ILogger? s_logger;
 
     /// <summary>
     /// Retrieves the logger instance.
@@ -21,7 +21,7 @@ internal class Logging
     /// <returns>The logger instance.</returns>
     internal static ILogger? GetLogger()
     {
-        return _logger;
+        return s_logger;
     }
 
     /// <summary>
@@ -36,8 +36,8 @@ internal class Logging
         services.AddLogging(loggerBuilder => loggerBuilder.AddConsole());
         services.AddLogging(loggerBuilder => loggerBuilder.AddSerilog(dispose: true));
         
-        _serviceProvider = services.BuildServiceProvider();
-        _logger = _serviceProvider.GetService<ILogger<Program>>();
+        s_serviceProvider = services.BuildServiceProvider();
+        s_logger = s_serviceProvider.GetService<ILogger<Program>>();
     }
 
     /// <summary>
@@ -45,6 +45,6 @@ internal class Logging
     /// </summary>
     ~Logging()
     {
-        _serviceProvider.Dispose();
+        s_serviceProvider.Dispose();
     }
 }

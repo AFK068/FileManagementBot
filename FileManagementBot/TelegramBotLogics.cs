@@ -15,7 +15,7 @@ internal class TelegramBotLogics
     private string _telegramBotToken = "6429131594:AAEZgHjGKW_vBroLQ7kJ4xSe6HKrvmFQVSs";
     
     // Instance of UserInteractionProcessing for handling user interactions.
-    private readonly UserInteractionProcessing _sUserInteractionProcessing = new UserInteractionProcessing();
+    private readonly UserInteractionProcessing _userInteractionProcessing = new UserInteractionProcessing();
     
     /// <summary>
     /// Enumeration representing different states of bot interactions.
@@ -88,7 +88,7 @@ internal class TelegramBotLogics
             // Process CallbackQuery for documents only.
             if (update.Type == UpdateType.CallbackQuery && (сurrentState == StatesEnum.Document || сurrentState == StatesEnum.Filter))
             {
-                await _sUserInteractionProcessing.HandleCallbackQuery(botClient, update.CallbackQuery!);
+                await _userInteractionProcessing.HandleCallbackQuery(botClient, update.CallbackQuery!);
                 return;
             }
 
@@ -98,7 +98,7 @@ internal class TelegramBotLogics
                 UserStateManager.GetInstance().UsersStates[update.Message.Chat.Id] = StatesEnum.Document;
                 Logging.GetLogger()!.LogInformation("Message chat id: {0} ; User sent a document : {1} ",update.Message.Chat.Id, update.Message.Document.FileName);
                 
-                var data = await _sUserInteractionProcessing.SaveAndParseDocument(botClient, update, cancellationToken);
+                var data = await _userInteractionProcessing.SaveAndParseDocument(botClient, update, cancellationToken);
             
                 if (data == null)
                     return;

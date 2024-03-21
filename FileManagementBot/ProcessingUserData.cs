@@ -115,9 +115,9 @@ internal class ProcessingUserData
         {
             try
             {
-                var data = dataManage.FilterObject(UserStateManager.GetInstance().usersGasStationObjects[message.Chat.Id], 
-                    UserStateManager.GetInstance().usersgasStationFirstEnumForFilter[message.Chat.Id], messageFromUser, 
-                    UserStateManager.GetInstance().usersgasStationSecondEnumForFilter[message.Chat.Id]);
+                var data = dataManage.FilterObject(UserStateManager.GetInstance().UsersGasStationObjects[message.Chat.Id], 
+                    UserStateManager.GetInstance().UsersGasStationFirstEnumForFilter[message.Chat.Id], messageFromUser, 
+                    UserStateManager.GetInstance().UsersGasStationSecondEnumForFilter[message.Chat.Id]);
                 
                 UserStateManager.GetInstance().GetUserGasStationsLastUpdate(message.Chat.Id, data);
 
@@ -126,7 +126,7 @@ internal class ProcessingUserData
             }
             catch (Exception ex)
             {
-                Logging.GetLogger()!.LogError("Bot id : {0} ; Error while searching for a suitable object ; Message from user : {1} ", botClient.BotId, messageFromUser);
+                Logging.GetLogger()!.LogError("Message chat id : {0} ; Error while searching for a suitable object ; Message from user : {1} ", message.Chat.Id, messageFromUser);
                 await botClient.SendTextMessageAsync(message.Chat.Id, $"\u274c {ex.Message}\n\n\ud83d\udd03 Повторите попытку поиска:");
             }
         }

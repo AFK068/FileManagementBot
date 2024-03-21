@@ -103,7 +103,10 @@ public class DataManager
         // Filtering by one field.
         if (field2 == GasStationEnum.None || (field1 == field2))
         {
-            foundedStations = gasStations.Where(station => prop1.GetValue(station)!.ToString() == filterField).ToList();
+            var propType = prop1.PropertyType;
+            var filterValue = ConvertValue(filterField, propType);
+
+            foundedStations = gasStations.Where(station => prop1.GetValue(station)!.Equals(filterValue)).ToList();
         }
         else
         {
@@ -115,12 +118,50 @@ public class DataManager
             {
                 throw new ArgumentException($"Свойство {field2} не найдено в классе GasStation.");
             }
+            
+            var prop1Type = prop1.PropertyType;
+            var prop2Type = prop2.PropertyType;
+            var filterValue1 = ConvertValue(words[0], prop1Type);
+            var filterValue2 = ConvertValue(words[1], prop2Type);
 
             // Filtering by two fields.
-            foundedStations = gasStations.Where(station => prop1.GetValue(station)!.ToString() == words[0] && prop2.GetValue(station)!.ToString() == words[1]).ToList();
+            foundedStations = gasStations.Where(station => prop1.GetValue(station)!.Equals(filterValue1) && prop2.GetValue(station)!.Equals(filterValue2)).ToList();
         }
 
         dataValidator.CheckObjectCount(foundedStations);
         return foundedStations;
+    }
+    
+    /// <summary>
+    /// Converts the given string value to the specified target type.
+    /// </summary>
+    /// <param name="value">The string value to convert.</param>
+    /// <param name="targetType">The type to which the value should be converted.</param>
+    /// <returns>The converted value.</returns>
+    /// <exception cref="ArgumentException">Throw argument exception while uncorrected type massage.</exception>
+    private object ConvertValue(string value, Type targetType)
+    {
+        try
+        {
+            return Convert.ChangeType(value, targetType);
+        }
+        catch (FormatException)
+        {
+            string expectedTypeDescription;
+            if (targetType == typeof(int))
+            {
+                expectedTypeDescription = "целое число";
+            }
+            else if (targetType == typeof(DateTime))
+            {
+                expectedTypeDescription = "дата";
+            }
+            else
+            {
+                expectedTypeDescription = targetType.Name;
+            }
+
+            throw new ArgumentException($"Некорректный формат значения: '{value}'. Ожидалось значение типа : {expectedTypeDescription}.");
+        }
     }
 }

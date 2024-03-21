@@ -8,9 +8,6 @@ namespace FileManagementBot;
 /// </summary>
 internal class HandleUniversalFilterCommands
 {
-    // Represents the first filter field.
-    internal static DataManager.GasStationEnum s_firstFilterField;
-    
     // Singleton instance of HandleUniversalFilterCommands.
     private static HandleUniversalFilterCommands s_handleUniversalFilterCommand;
     
@@ -60,15 +57,15 @@ internal class HandleUniversalFilterCommands
         UserStateManager.GetInstance().GetUserGasStationSecondEnum(message.Chat.Id, field);
         UserStateManager.GetInstance().UsersStates[message.Chat.Id] = TelegramBotLogics.StatesEnum.Filter;
 
-        if (UserStateManager.GetInstance().usersgasStationFirstEnumForFilter[message.Chat.Id] == UserStateManager.GetInstance().usersgasStationSecondEnumForFilter[message.Chat.Id])
+        if (UserStateManager.GetInstance().UsersGasStationFirstEnumForFilter[message.Chat.Id] == UserStateManager.GetInstance().UsersGasStationSecondEnumForFilter[message.Chat.Id])
         {
             await botClient.SendTextMessageAsync(message.Chat.Id, $"\ud83d\udd0e Введите данные для фильтрации по полю {field}");
             return;
         }
         
-        await botClient.SendTextMessageAsync(message.Chat.Id, $"Введите данные для фильтрации по полям {UserStateManager.GetInstance().usersgasStationFirstEnumForFilter[message.Chat.Id]} и " +
-                                                              $"{UserStateManager.GetInstance().usersgasStationSecondEnumForFilter[message.Chat.Id] } \ud83d\udd0e " + 
-                                                              $":\nПервая строка поле {UserStateManager.GetInstance().usersgasStationFirstEnumForFilter[message.Chat.Id]}\nВторая ст" +
-                                                              $"рока поле {UserStateManager.GetInstance().usersgasStationSecondEnumForFilter[message.Chat.Id] }");
+        await botClient.SendTextMessageAsync(message.Chat.Id, $"Введите данные для фильтрации по полям {UserStateManager.GetInstance().UsersGasStationFirstEnumForFilter[message.Chat.Id]} и " +
+                                                              $"{UserStateManager.GetInstance().UsersGasStationSecondEnumForFilter[message.Chat.Id] } \ud83d\udd0e " + 
+                                                              $":\nПервая строка поле {UserStateManager.GetInstance().UsersGasStationFirstEnumForFilter[message.Chat.Id]}\nВторая ст" +
+                                                              $"рока поле {UserStateManager.GetInstance().UsersGasStationSecondEnumForFilter[message.Chat.Id] }");
     }
 }
