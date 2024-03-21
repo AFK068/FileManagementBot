@@ -10,6 +10,8 @@ class Program
     /// </summary>
     static void Main()
     {
+        // https://t.me/FileManagmentByAfk_bot
+        
         TelegramBotLogics telegramBotLogics = new TelegramBotLogics();
         
         Logging logging = new Logging();

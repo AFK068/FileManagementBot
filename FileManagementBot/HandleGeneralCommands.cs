@@ -9,7 +9,7 @@ namespace FileManagementBot;
 internal class HandleGeneralCommands
 {
     // Singleton instance of HandleGeneralCommands.
-    private static HandleGeneralCommands _sHandleGeneralCommands;
+    private static HandleGeneralCommands s_handleGeneralCommands;
     
     /// <summary>
     /// Gets the singleton instance of HandleGeneralCommands.
@@ -17,10 +17,10 @@ internal class HandleGeneralCommands
     /// <returns>The singleton instance of HandleGeneralCommands.</returns>
     internal static HandleGeneralCommands GetInstance()
     {
-        if (_sHandleGeneralCommands == null)
-            _sHandleGeneralCommands = new HandleGeneralCommands();
+        if (s_handleGeneralCommands == null)
+            s_handleGeneralCommands = new HandleGeneralCommands();
 
-        return _sHandleGeneralCommands;
+        return s_handleGeneralCommands;
     }
     
     /// <summary>
