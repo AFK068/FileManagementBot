@@ -16,7 +16,7 @@ public class MenuStack
     /// Gets the singleton instance of the MenuStack class.
     /// </summary>
     /// <returns>The singleton instance of the MenuStack class.</returns>
-    public static MenuStack GetInstance()
+    internal static MenuStack GetInstance()
     {
         if (s_instance == null)
             s_instance = new MenuStack();
@@ -28,7 +28,7 @@ public class MenuStack
     /// Pushes an inline keyboard markup onto the menu stack.
     /// </summary>
     /// <param name="inlineKeyboard">The inline keyboard markup to push onto the stack.</param>
-    public async Task PushInlineKeyboardMarkupInMenuStack(InlineKeyboardMarkup inlineKeyboard)
+    internal async Task PushInlineKeyboardMarkupInMenuStack(InlineKeyboardMarkup inlineKeyboard)
     {
         _menuStack.Push(inlineKeyboard);
     }
@@ -37,7 +37,7 @@ public class MenuStack
     /// Pops an inline keyboard markup from the menu stack.
     /// </summary>
     /// <returns>The inline keyboard markup popped from the stack, or null if the stack is empty.</returns>
-    public async Task<InlineKeyboardMarkup> PopInlineKeyboardMarkupFromMenuStack()
+    internal async Task<InlineKeyboardMarkup> PopInlineKeyboardMarkupFromMenuStack()
     {
         if (_menuStack.Count > 1)
         {

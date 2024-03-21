@@ -6,8 +6,30 @@ namespace FileManagementBot;
 /// <summary>
 /// Class responsible for validating and processing data received from Telegram updates.
 /// </summary>
-public class TelegramBotDataValidator
+internal class TelegramBotDataValidator
 {
+    /// <summary>
+    /// Processes a CSV file and returns a list of GasStation objects.
+    /// </summary>
+    /// <param name="fileStream">The stream of the CSV file.</param>
+    /// <returns>A list of GasStation objects parsed from the CSV file.</returns>
+    private async Task<List<GasStation>> ProcessCSVFile(Stream fileStream)
+    {
+        CSVProcessing csvProcessing = new CSVProcessing();
+        return csvProcessing.Read(fileStream);
+    }
+
+    /// <summary>
+    /// Processes a JSON file and returns a list of GasStation objects.
+    /// </summary>
+    /// <param name="fileStream">The stream of the JSON file.</param>
+    /// <returns>A list of GasStation objects parsed from the JSON file.</returns>
+    private async Task<List<GasStation>> ProcessJSONFile(Stream fileStream)
+    {
+        JSONProcessing jsonProcessing = new JSONProcessing();
+        return jsonProcessing.Read(fileStream);
+    }
+    
     /// <summary>
     /// Checks if the file extension is valid and sends an error message if it is not.
     /// </summary>
@@ -22,7 +44,7 @@ public class TelegramBotDataValidator
 
         if (fileExtension != ".json" && fileExtension != ".csv")
         {
-            await botClient.SendTextMessageAsync(update.Message.Chat.Id, $"\u274c Файлы формата {fileExtension} недопустимы.\nРазрешенные форматы: .json или .csv ");
+            await botClient.SendTextMessageAsync(update.Message!.Chat.Id, $"\u274c Файлы формата {fileExtension} недопустимы.\nРазрешенные форматы: .json или .csv ");
             return (false, "");
         }
         
@@ -54,28 +76,6 @@ public class TelegramBotDataValidator
             gasStations = await ProcessJSONFile(fileStream);
         }
 
-        return gasStations;
-    }
-    
-    /// <summary>
-    /// Processes a CSV file and returns a list of GasStation objects.
-    /// </summary>
-    /// <param name="fileStream">The stream of the CSV file.</param>
-    /// <returns>A list of GasStation objects parsed from the CSV file.</returns>
-    private async Task<List<GasStation>> ProcessCSVFile(Stream fileStream)
-    {
-        CSVProcessing csvProcessing = new CSVProcessing();
-        return csvProcessing.Read(fileStream);
-    }
-
-    /// <summary>
-    /// Processes a JSON file and returns a list of GasStation objects.
-    /// </summary>
-    /// <param name="fileStream">The stream of the JSON file.</param>
-    /// <returns>A list of GasStation objects parsed from the JSON file.</returns>
-    private async Task<List<GasStation>> ProcessJSONFile(Stream fileStream)
-    {
-        JSONProcessing jsonProcessing = new JSONProcessing();
-        return jsonProcessing.Read(fileStream);
+        return gasStations!;
     }
 }

@@ -7,7 +7,7 @@ namespace FileManagementBot;
 /// <summary>
 /// Provides methods for processing documents and sending them in various formats.
 /// </summary>
-public static class DocumentProcessing
+internal static class DocumentProcessing
 {
     /// <summary>
     /// Sends a JSON file containing gas station data.
@@ -51,7 +51,7 @@ public static class DocumentProcessing
             await using (stream)
             {
                 await botClient.SendDocumentAsync(message.Chat.Id, new InputFileStream(stream, "Updated data.csv"), caption: "\ud83d\uddc2 Обновленные данные:"); 
-                Logging.GetLogger()!.LogInformation($"Message chat id : {0} ; File sent by user. ; File name - \"Updated data.csv\"", message.Chat.Id);
+                Logging.GetLogger()!.LogInformation($"Message chat id : {0} ; File sent by user ; File name - \"Updated data.csv\"", message.Chat.Id);
             }
         }
         catch (Exception ex)

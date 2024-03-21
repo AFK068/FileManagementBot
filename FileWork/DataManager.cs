@@ -22,7 +22,8 @@ public class DataManager
         TestDate,
         GeodataCenter,
         Geoarea,
-        AdmAreaAndOwner
+        AdmAreaAndOwner,
+        None
     }
     
     // Provides methods for managing gas station data.
@@ -83,7 +84,7 @@ public class DataManager
     /// <param name="field2">Optional. The second property to filter by (for two-field filtering).</param>
     /// <returns>The filtered list of gas stations.</returns>
     /// <exception cref="ArgumentException">Thrown when the list of gas stations is null or empty, or when a specified property does not exist in the GasStation class.</exception>
-    public List<GasStation> FilterObject(List<GasStation>? gasStations, GasStationEnum field1, string filterField, GasStationEnum? field2 = null)
+    public List<GasStation> FilterObject(List<GasStation>? gasStations, GasStationEnum field1, string filterField, GasStationEnum field2 = GasStationEnum.None)
     {
         if (gasStations == null || gasStations.Count == 0)
         {
@@ -93,30 +94,30 @@ public class DataManager
         DataValidator dataValidator = new DataValidator();
         List<GasStation> foundedStations = new List<GasStation>();
 
-        PropertyInfo prop1 = typeof(GasStation).GetProperty(field1.ToString());
+        PropertyInfo prop1 = typeof(GasStation).GetProperty(field1.ToString())!;
         if (prop1 == null)
         {
             throw new ArgumentException($"Свойство {field1} не найдено в классе GasStation.");
         }
 
         // Filtering by one field.
-        if (field2 == null || (field1 == field2))
+        if (field2 == GasStationEnum.None || (field1 == field2))
         {
-            foundedStations = gasStations.Where(station => prop1.GetValue(station).ToString() == filterField).ToList();
+            foundedStations = gasStations.Where(station => prop1.GetValue(station)!.ToString() == filterField).ToList();
         }
         else
         {
             dataValidator.CheckStringForTwoWords(filterField);
             string[] words = filterField.Split(new[] {'\n'}, StringSplitOptions.RemoveEmptyEntries);
             
-            PropertyInfo prop2 = typeof(GasStation).GetProperty(field2.ToString());
+            PropertyInfo prop2 = typeof(GasStation).GetProperty(field2.ToString()!);
             if (prop2 == null)
             {
                 throw new ArgumentException($"Свойство {field2} не найдено в классе GasStation.");
             }
 
             // Filtering by two fields.
-            foundedStations = gasStations.Where(station => prop1.GetValue(station).ToString() == words[0] && prop2.GetValue(station).ToString() == words[1]).ToList();
+            foundedStations = gasStations.Where(station => prop1.GetValue(station)!.ToString() == words[0] && prop2.GetValue(station)!.ToString() == words[1]).ToList();
         }
 
         dataValidator.CheckObjectCount(foundedStations);

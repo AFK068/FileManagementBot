@@ -17,13 +17,10 @@ internal class TelegramBotLogics
     // Instance of UserInteractionProcessing for handling user interactions.
     private readonly UserInteractionProcessing _sUserInteractionProcessing = new UserInteractionProcessing();
     
-    // Current state of the bot.
-    public static StatesEnum сurrentState = StatesEnum.Message;
-    
     /// <summary>
     /// Enumeration representing different states of bot interactions.
     /// </summary>
-    public enum StatesEnum
+    internal enum StatesEnum
     {
         Message,
         Document,
@@ -59,12 +56,15 @@ internal class TelegramBotLogics
     {
         try
         {
+            // Define a different state for each user.
+            StatesEnum сurrentState = UserStateManager.GetInstance().GetUserState(GetChatId(update));
+            
             // Process messages outside of CallbackQuery and documents.
             if (update.Type == UpdateType.Message && update?.Message?.Text != null && сurrentState == StatesEnum.Message)
             {
                 await ProcessingUserData.GetInstance().HandleMessage(botClient, update.Message);
                 
-                Logging.GetLogger()!.LogInformation("Bot id : {0} ; User sent a message : {1} ", botClient.BotId, update.Message.Text);
+                Logging.GetLogger()!.LogInformation("Message chat id : {0} ; User sent a message : {1} ", update.Message.Chat.Id, update.Message.Text);
                 return;
             }
             
@@ -73,7 +73,7 @@ internal class TelegramBotLogics
             {
                 await ProcessingUserData.GetInstance().HandleMessageForFilter(botClient, update.Message);
                 
-                Logging.GetLogger()!.LogInformation("Bot id : {0} ; User sent a message for filtering : {1} ", botClient.BotId, update.Message.Text);
+                Logging.GetLogger()!.LogInformation("Message chat id : {0} ; User sent a message for filtering : {1} ", update.Message.Chat.Id, update.Message.Text);
                 return;
             }
 
@@ -81,38 +81,63 @@ internal class TelegramBotLogics
             {
                 await ProcessingUserData.GetInstance().HandleMessageInMenu(botClient, update.Message);
                 
-                Logging.GetLogger()!.LogInformation("Bot id : {0} ; User sent a message during menu processing : {1} ", botClient.BotId, update.Message.Text);
+                Logging.GetLogger()!.LogInformation("Message chat id : {0} ; User sent a message during menu processing : {1} ", update.Message.Chat.Id, update.Message.Text);
                 return;
             }
         
             // Process CallbackQuery for documents only.
             if (update.Type == UpdateType.CallbackQuery && (сurrentState == StatesEnum.Document || сurrentState == StatesEnum.Filter))
             {
-                await _sUserInteractionProcessing.HandleCallbackQuery(botClient, update.CallbackQuery);
+                await _sUserInteractionProcessing.HandleCallbackQuery(botClient, update.CallbackQuery!);
                 return;
             }
 
             // Document processing.
-            if (update.Message.Document != null)
+            if (update.Message != null && update.Message.Document != null)
             { 
-                сurrentState = StatesEnum.Document;
-                Logging.GetLogger()!.LogInformation("Bot id : {0} ; User sent a document : {1} ", botClient.BotId, update.Message.Document.FileName);
+                UserStateManager.GetInstance().UsersStates[update.Message.Chat.Id] = StatesEnum.Document;
+                Logging.GetLogger()!.LogInformation("Message chat id: {0} ; User sent a document : {1} ",update.Message.Chat.Id, update.Message.Document.FileName);
                 
                 var data = await _sUserInteractionProcessing.SaveAndParseDocument(botClient, update, cancellationToken);
             
                 if (data == null)
                     return;
 
-                HandleGeneralCommands.gasStations = data;
-                await HandleInlineKeyboard.GetInstance().ProvideChoiceSortOrFilter(botClient, update.Message, update.CallbackQuery);
+                UserStateManager.GetInstance().GetUserGasStationObjects(update.Message.Chat.Id, data);
+                await HandleInlineKeyboard.GetInstance().ProvideChoiceSortOrFilter(botClient, update.Message, update.CallbackQuery!);
             }   
         }
         catch (Exception)
         {
             // If an error occurs, do not process the buttons.
-            сurrentState = StatesEnum.Message;
-            Logging.GetLogger()!.LogError("Bot id : {0} ; Error while processing commands.", botClient.BotId);
+            UserStateManager.GetInstance().UsersStates[update.Message!.Chat.Id] = StatesEnum.Message;
+            Logging.GetLogger()!.LogError("Bot id : {0} ; Message chat id : {1} ; Error while processing commands.", botClient.BotId, update.Message.Chat.Id);
         }
+    }
+    
+    /// <summary>
+    /// Get chat id.
+    /// </summary>
+    /// <param name="update">The update received from Telegram.</param>
+    /// <returns>User chat id.</returns>
+    private long GetChatId(Update update)
+    {
+        long chatId;
+        
+        if (update.Message != null)
+        {
+            chatId = update.Message.Chat.Id;
+        }
+        else if (update.CallbackQuery != null)
+        {
+            chatId = update.CallbackQuery.Message!.Chat.Id;
+        }
+        else
+        {
+            chatId = 0;
+        }
+
+        return chatId;
     }
     
     /// <summary>

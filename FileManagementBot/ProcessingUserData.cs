@@ -8,7 +8,7 @@ namespace FileManagementBot;
 /// <summary>
 /// Class responsible for processing user data and managing interactions with the Telegram bot.
 /// </summary>
-public class ProcessingUserData
+internal class ProcessingUserData
 {
     // Singleton instance of the ProcessingUserData class.
     private static ProcessingUserData s_ProcessingUserData;
@@ -32,17 +32,11 @@ public class ProcessingUserData
                                            "\ud83d\uddc2 При выборе формата файла вы можете получить обработанный файл в 2 форматах: .json и .csv.\n\n" +
                                            "\u2764\ufe0f Приятного использования, With love from AFK1";
     
-    // Enumeration representing the first gas station selection.
-    internal static DataManager.GasStationEnum gasStationFirstEnum;
-
-    // Nullable enumeration representing the second gas station selection.
-    internal static DataManager.GasStationEnum? gasStationSecondEnum;
-
     /// <summary>
     /// Gets the singleton instance of the ProcessingUserData class.
     /// </summary>
     /// <returns>The singleton instance of the ProcessingUserData class.</returns>
-    public static ProcessingUserData GetInstance()
+    internal static ProcessingUserData GetInstance()
     {
         if (s_ProcessingUserData == null)
             s_ProcessingUserData = new ProcessingUserData();
@@ -89,6 +83,11 @@ public class ProcessingUserData
         }
     }
 
+    /// <summary>
+    /// Handles the message in the menu, providing appropriate responses based on the message content.
+    /// </summary>
+    /// <param name="botClient">The Telegram bot client instance.</param>
+    /// <param name="message">The message received from the user.</param>
     internal async Task HandleMessageInMenu(ITelegramBotClient botClient, Message message)
     {
         if (message.Text == "/help")
@@ -116,8 +115,11 @@ public class ProcessingUserData
         {
             try
             {
-                var data = dataManage.FilterObject(HandleGeneralCommands.gasStations, gasStationFirstEnum, messageFromUser, gasStationSecondEnum);
-                HandleGeneralCommands.gasStationsLastUpdate = data;
+                var data = dataManage.FilterObject(UserStateManager.GetInstance().usersGasStationObjects[message.Chat.Id], 
+                    UserStateManager.GetInstance().usersgasStationFirstEnumForFilter[message.Chat.Id], messageFromUser, 
+                    UserStateManager.GetInstance().usersgasStationSecondEnumForFilter[message.Chat.Id]);
+                
+                UserStateManager.GetInstance().GetUserGasStationsLastUpdate(message.Chat.Id, data);
 
                 await botClient.SendTextMessageAsync(message.Chat.Id, "Найдены совпадения.");
                 await HandleInlineKeyboard.GetInstance().ProvideChoiceFileFormatForFilter(botClient, message);

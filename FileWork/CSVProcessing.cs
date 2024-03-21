@@ -41,7 +41,7 @@ public class CSVProcessing
             using (var writer = new StreamWriter(memoryStream, leaveOpen: true))
             using (var csvWriter = new CsvWriter(writer, csvConfig))
             {
-                // Печетаем заголовки.
+                // Write headers.
                 writer.Write(_firstLineHeaders);
                 writer.Write(_secondLineHeaders);
                 

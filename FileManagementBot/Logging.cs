@@ -7,7 +7,7 @@ namespace FileManagementBot;
 /// <summary>
 /// Class responsible for configuring and providing logging functionality.
 /// </summary>
-public class Logging
+internal class Logging
 {
     // The service provider for managing dependencies.
     private static ServiceProvider _serviceProvider;
@@ -27,7 +27,7 @@ public class Logging
     /// <summary>
     /// Initializes a new instance of the Logging class.
     /// </summary>
-    public Logging()
+    internal Logging()
     {
         Log.Logger = new LoggerConfiguration().MinimumLevel.Debug().WriteTo.File(Path.Combine("..", "..", "..", "var", "bot.log")).CreateLogger();
 

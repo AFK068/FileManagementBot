@@ -12,7 +12,7 @@ internal class UserInteractionProcessing
 {
     // Array containing fields of gas stations for processing.
     private DataManager.GasStationEnum[] _fieldsOfGasStation = ((DataManager.GasStationEnum[])Enum.GetValues(typeof(DataManager.GasStationEnum)))
-        .Take(Enum.GetValues(typeof(DataManager.GasStationEnum)).Length - 1).ToArray();
+        .Take(Enum.GetValues(typeof(DataManager.GasStationEnum)).Length - 2).ToArray();
     
     
     /// <summary>
@@ -81,7 +81,7 @@ internal class UserInteractionProcessing
                 Logging.GetLogger()!.LogError("Bot id : {0} ; Error while processing file. ; File path : {1} ", botClient.BotId, filePath);
                 
                 // Change the state.
-                TelegramBotLogics.сurrentState = TelegramBotLogics.StatesEnum.Message;
+                UserStateManager.GetInstance().UsersStates[update.Message.Chat.Id] = TelegramBotLogics.StatesEnum.Message;
                 await botClient.SendTextMessageAsync(update.Message.Chat.Id, ex.Message, cancellationToken: cancellationToken);
             }
         }
@@ -101,29 +101,39 @@ internal class UserInteractionProcessing
             // Separate filtering and sorting.
             { "Sorting", HandleGeneralCommands.GetInstance().HandleSort },
             { "Filtration", HandleGeneralCommands.GetInstance().HandleFilter },
-            
+
             // Sorting by two fields.
             { "SortTestDateAscending", HandleGeneralCommands.GetInstance().HandleSortAscending },
             { "SortTestDateDescending", HandleGeneralCommands.GetInstance().HandleSortDescending },
-            
+
             // Filter by three fields.
             { "FilterDistrict", HandleGeneralCommands.GetInstance().HandleFilterDistrict },
-            { "FilterOwner", HandleGeneralCommands.GetInstance().HandleFilterOwner},
+            { "FilterOwner", HandleGeneralCommands.GetInstance().HandleFilterOwner },
             { "FilterAdmAreaAndOwner", HandleGeneralCommands.GetInstance().HandleFilterAdmAreaAndOwner },
-            
+
             // Back commands and file format.
             { "Back", HandleGeneralCommands.GetInstance().HandleBackToPreviousStep },
             { "SendJSONFile", HandleGeneralCommands.GetInstance().HandleSendJsonFile },
             { "SendCSVFile", HandleGeneralCommands.GetInstance().HandleSendCsvFile },
-            
+
             // Universal sorting.
             { "UniversalSort", HandleGeneralCommands.GetInstance().HandleUniversalSort },
-            { "SortAscendingForUniversalSide", (botClient, message) => HandleGeneralCommands.GetInstance().HandleFileFormatToDownloadForUniversalSort(botClient, message, false) },
-            { "SortDescendingForUniversalSide", (botClient, message) => HandleGeneralCommands.GetInstance().HandleFileFormatToDownloadForUniversalSort(botClient, message, true)},
-            
+            {
+                "SortAscendingForUniversalSide",
+                (botClient, message) => HandleGeneralCommands.GetInstance()
+                    .HandleFileFormatToDownloadForUniversalSort(botClient, message, false)
+            },
+            {
+                "SortDescendingForUniversalSide", (botClient, message) => 
+                    HandleGeneralCommands.GetInstance().HandleFileFormatToDownloadForUniversalSort(botClient, message, true)
+            },
+
             // Universal filtering.
             { "MoreDetailedFiltering", HandleUniversalFilterCommands.GetInstance().HandleMoreDetailedFiltering },
-            { "UniversalFilterTheSameField", (botClient, message) => HandleUniversalFilterCommands.GetInstance().HandleSecondFieldMoreDetailedFiltering(botClient, message, HandleUniversalFilterCommands.s_firstFilterField) }
+            {
+                "UniversalFilterTheSameField", (botClient, message) => 
+                    HandleUniversalFilterCommands.GetInstance().HandleSecondFieldMoreDetailedFiltering(botClient, message, HandleUniversalFilterCommands.s_firstFilterField)
+            }
         };
         
         // Generate universal sort field.
@@ -145,11 +155,11 @@ internal class UserInteractionProcessing
         }
         
         // Handle function calls.
-        if (commandHandlers.TryGetValue(callbackQuery.Data, out var handler))
+        if (commandHandlers.TryGetValue(callbackQuery.Data!, out var handler))
         {
             try
             {
-                await handler(botClient, callbackQuery.Message);
+                await handler(botClient, callbackQuery.Message!);
                 Logging.GetLogger()!.LogInformation("Bot id : {0} ; The user clicked: {1}", botClient.BotId, callbackQuery.Data);
             }
             catch (Exception ex)
@@ -159,7 +169,7 @@ internal class UserInteractionProcessing
         }
         else
         {
-            await botClient.SendTextMessageAsync(callbackQuery.Message.Chat.Id, $"Неизвестная команда: {callbackQuery.Data}");
+            await botClient.SendTextMessageAsync(callbackQuery.Message!.Chat.Id, $"Неизвестная команда: {callbackQuery.Data}");
         }
     }
 }

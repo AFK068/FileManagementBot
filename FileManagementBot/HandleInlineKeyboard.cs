@@ -6,7 +6,7 @@ namespace FileManagementBot;
 /// <summary>
 /// Handles inline keyboard operations for file management in the Telegram bot.
 /// </summary>
-public class HandleInlineKeyboard
+internal class HandleInlineKeyboard
 {
     // Singleton instance of HandleInlineKeyboard.
     private static HandleInlineKeyboard s_handleInlineKeyboard;
@@ -15,7 +15,7 @@ public class HandleInlineKeyboard
     /// Gets the singleton instance of HandleInlineKeyboard.
     /// </summary>
     /// <returns>The singleton instance of HandleInlineKeyboard.</returns>
-    public static HandleInlineKeyboard GetInstance()
+    internal static HandleInlineKeyboard GetInstance()
     {
         if (s_handleInlineKeyboard == null)
             s_handleInlineKeyboard = new HandleInlineKeyboard();

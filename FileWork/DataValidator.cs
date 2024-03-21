@@ -79,17 +79,17 @@ public class DataValidator
             {
                 if (property.PropertyType == typeof(int))
                 {
-                    if ((int)property.GetValue(station) != 0)
+                    if ((int)property.GetValue(station)! != 0)
                         return false;
                 }
                 else if (property.PropertyType == typeof(string))
                 {
-                    if (!string.IsNullOrEmpty((string)property.GetValue(station)))
+                    if (!string.IsNullOrEmpty((string)property.GetValue(station)!))
                         return false;
                 }
                 else if (property.PropertyType == typeof(DateTime))
                 {
-                    if ((DateTime)property.GetValue(station) != DateTime.MinValue)
+                    if ((DateTime)property.GetValue(station)! != DateTime.MinValue)
                         return false;
                 }
             }

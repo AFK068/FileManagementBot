@@ -186,16 +186,16 @@ public class GasStation
     /// </summary>
     public GasStation()
     {
-        _id = 0;
-        _fullName = "";
-        _globalId = 0;
-        _shortName = "";
-        _admArea = "";
-        _district = "";
-        _address = "";
-        _owner = "";
-        _testDate = DateTime.MinValue;
-        _geodataCenter = "";
-        _geoarea = "";
+        Id = 0;
+        FullName = "";
+        GlobalId = 0;
+        ShortName = "";
+        AdmArea = "";
+        District = "";
+        Address = "";
+        Owner = "";
+        TestDate = DateTime.MinValue;
+        GeodataCenter = "";
+        Geoarea = "";
     }
 }
