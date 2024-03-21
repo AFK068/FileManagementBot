@@ -42,6 +42,8 @@ internal class TelegramBotLogics
         
         botClient.StartReceiving(HandleUpdateAsync, HandlePollingErrorAsync, receiverOptions: receiverOptions, cancellationToken: cts.Token);
         
+        Thread.Sleep(-1);
+        
         Console.ReadLine();
         cts.Cancel();
     }

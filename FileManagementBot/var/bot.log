@@ -1877,3 +1877,112 @@ das
 2024-03-21 23:22:33.854 +03:00 [INF] Message chat id : 760109764 ; User sent a message : asd 
 2024-03-21 23:22:35.889 +03:00 [INF] Message chat id : 760109764 ; User sent a message : /start 
 2024-03-21 23:22:37.259 +03:00 [INF] Message chat id : 760109764 ; User sent a message : /help 
+2024-03-21 23:49:46.420 +03:00 [INF] Message chat id : 760109764 ; User sent a message : k 
+2024-03-21 23:49:49.584 +03:00 [INF] Message chat id : 760109764 ; User sent a message : /start 
+2024-03-21 23:49:49.950 +03:00 [INF] Message chat id : 760109764 ; User sent a message : /help 
+2024-03-21 23:49:55.849 +03:00 [INF] Message chat id: 760109764 ; User sent a document : 2024-03-21 23.21.33.jpg 
+2024-03-21 23:49:59.427 +03:00 [INF] Message chat id: 760109764 ; User sent a document : gas-station (1) (1) (1).csv 
+2024-03-21 23:50:02.156 +03:00 [INF] Message chat id : 760109764 ; The user clicked: Sorting
+2024-03-21 23:50:03.545 +03:00 [INF] Message chat id : 760109764 ; The user clicked: UniversalSort
+2024-03-21 23:50:04.785 +03:00 [INF] Message chat id : 760109764 ; The user clicked: UniversalSortField_Id
+2024-03-21 23:50:06.043 +03:00 [INF] Message chat id : 760109764 ; The user clicked: SortAscendingForUniversalSide
+2024-03-21 23:50:08.295 +03:00 [INF] Message chat id : 0 ; File sent by user. ; File name - "Updated data.json"
+2024-03-21 23:50:08.295 +03:00 [INF] Message chat id : 760109764 ; The user clicked: SendJSONFile
+2024-03-21 23:50:17.379 +03:00 [INF] Message chat id : 760109764 ; The user clicked: Back
+2024-03-21 23:50:18.086 +03:00 [INF] Message chat id : 760109764 ; The user clicked: Back
+2024-03-21 23:50:18.924 +03:00 [INF] Message chat id : 760109764 ; The user clicked: UniversalSortField_GeodataCenter
+2024-03-21 23:50:19.988 +03:00 [INF] Message chat id : 760109764 ; The user clicked: SortAscendingForUniversalSide
+2024-03-21 23:50:21.898 +03:00 [INF] Message chat id : 0 ; File sent by user. ; File name - "Updated data.json"
+2024-03-21 23:50:21.898 +03:00 [INF] Message chat id : 760109764 ; The user clicked: SendJSONFile
+2024-03-21 23:50:27.524 +03:00 [INF] Message chat id : 760109764 ; The user clicked: Back
+2024-03-21 23:50:28.123 +03:00 [INF] Message chat id : 760109764 ; The user clicked: Back
+2024-03-21 23:50:29.923 +03:00 [INF] Message chat id : 760109764 ; User sent a message during menu processing : kl 
+2024-03-21 23:50:31.414 +03:00 [INF] Message chat id : 760109764 ; The user clicked: Back
+2024-03-21 23:50:32.934 +03:00 [INF] Message chat id : 760109764 ; The user clicked: UniversalSort
+2024-03-21 23:50:52.483 +03:00 [INF] Message chat id : 760109764 ; The user clicked: Back
+2024-03-21 23:50:53.962 +03:00 [INF] Message chat id : 760109764 ; The user clicked: Back
+2024-03-21 23:50:54.981 +03:00 [INF] Message chat id : 760109764 ; The user clicked: Filtration
+2024-03-21 23:50:58.188 +03:00 [INF] Message chat id : 760109764 ; The user clicked: FilterDistrict
+2024-03-21 23:51:00.114 +03:00 [ERR] Message chat id : 760109764 ; Error while searching for a suitable object ; Message from user : ljk 
+2024-03-21 23:51:00.263 +03:00 [INF] Message chat id : 760109764 ; User sent a message for filtering : ljk 
+2024-03-21 23:51:14.453 +03:00 [ERR] Message chat id : 760109764 ; Error while searching for a suitable object ; Message from user : район Отрадное" 
+2024-03-21 23:51:14.544 +03:00 [INF] Message chat id : 760109764 ; User sent a message for filtering : район Отрадное" 
+2024-03-21 23:51:18.231 +03:00 [INF] Message chat id : 760109764 ; User sent a message for filtering : район Отрадное 
+2024-03-21 23:51:21.394 +03:00 [INF] Message chat id : 760109764 ; The user clicked: FilterAdmAreaAndOwner
+2024-03-21 23:51:23.434 +03:00 [ERR] Message chat id : 760109764 ; Error while searching for a suitable object ; Message from user : as
+sd 
+2024-03-21 23:51:23.529 +03:00 [INF] Message chat id : 760109764 ; User sent a message for filtering : as
+sd 
+2024-03-21 23:51:41.190 +03:00 [INF] Message chat id : 760109764 ; User sent a message for filtering : Северо-Восточный административный округ
+ОАО «РН-Москва» 
+2024-03-21 23:52:12.683 +03:00 [INF] Message chat id : 760109764 ; The user clicked: Back
+2024-03-21 23:52:13.497 +03:00 [INF] Message chat id : 760109764 ; The user clicked: Filtration
+2024-03-21 23:52:14.699 +03:00 [INF] Message chat id : 760109764 ; The user clicked: MoreDetailedFiltering
+2024-03-21 23:52:15.777 +03:00 [INF] Message chat id : 760109764 ; The user clicked: UniversalFilterField_ShortName
+2024-03-21 23:52:16.779 +03:00 [INF] Message chat id : 760109764 ; The user clicked: UniversalFilterSecondField_FullName
+2024-03-21 23:52:18.430 +03:00 [INF] Message chat id : 760109764 ; The user clicked: UniversalFilterTheSameField
+2024-03-21 23:52:20.571 +03:00 [INF] Message chat id : 760109764 ; The user clicked: Back
+2024-03-21 23:52:21.450 +03:00 [INF] Message chat id : 760109764 ; The user clicked: UniversalFilterField_GlobalId
+2024-03-21 23:52:22.879 +03:00 [INF] Message chat id : 760109764 ; The user clicked: UniversalFilterSecondField_TestDate
+2024-03-21 23:52:24.201 +03:00 [INF] Message chat id : 760109764 ; The user clicked: UniversalFilterTheSameField
+2024-03-21 23:52:25.474 +03:00 [INF] Message chat id : 760109764 ; The user clicked: UniversalFilterSecondField_Owner
+2024-03-21 23:52:26.711 +03:00 [INF] Message chat id : 760109764 ; The user clicked: UniversalFilterSecondField_Geoarea
+2024-03-21 23:52:31.713 +03:00 [INF] Message chat id : 760109764 ; The user clicked: UniversalFilterTheSameField
+2024-03-21 23:52:33.759 +03:00 [INF] Message chat id : 760109764 ; The user clicked: Back
+2024-03-21 23:52:34.690 +03:00 [INF] Message chat id : 760109764 ; The user clicked: UniversalFilterField_GlobalId
+2024-03-21 23:52:35.628 +03:00 [INF] Message chat id : 760109764 ; The user clicked: UniversalFilterSecondField_Id
+2024-03-21 23:52:36.971 +03:00 [ERR] Message chat id : 760109764 ; Error while searching for a suitable object ; Message from user : 12
+sd 
+2024-03-21 23:52:37.053 +03:00 [INF] Message chat id : 760109764 ; User sent a message for filtering : 12
+sd 
+2024-03-21 23:52:43.432 +03:00 [ERR] Message chat id : 760109764 ; Error while searching for a suitable object ; Message from user : 12
+asd 
+2024-03-21 23:52:43.666 +03:00 [INF] Message chat id : 760109764 ; User sent a message for filtering : 12
+asd 
+2024-03-21 23:52:44.441 +03:00 [ERR] Message chat id : 760109764 ; Error while searching for a suitable object ; Message from user : 12
+asd 
+2024-03-21 23:52:44.521 +03:00 [INF] Message chat id : 760109764 ; User sent a message for filtering : 12
+asd 
+2024-03-21 23:52:46.152 +03:00 [ERR] Message chat id : 760109764 ; Error while searching for a suitable object ; Message from user : 1
+12 
+2024-03-21 23:52:46.246 +03:00 [INF] Message chat id : 760109764 ; User sent a message for filtering : 1
+12 
+2024-03-21 23:53:03.073 +03:00 [INF] Message chat id : 760109764 ; The user clicked: UniversalFilterTheSameField
+2024-03-21 23:53:04.206 +03:00 [INF] Message chat id : 760109764 ; The user clicked: Back
+2024-03-21 23:53:04.987 +03:00 [INF] Message chat id : 760109764 ; The user clicked: UniversalFilterField_Id
+2024-03-21 23:53:08.467 +03:00 [INF] Message chat id : 760109764 ; The user clicked: UniversalFilterSecondField_Geoarea
+2024-03-21 23:54:02.212 +03:00 [ERR] Message chat id : 760109764 ; Error while searching for a suitable object ; Message from user : 14 
+2024-03-21 23:54:02.413 +03:00 [INF] Message chat id : 760109764 ; User sent a message for filtering : 14 
+2024-03-21 23:54:05.037 +03:00 [ERR] Message chat id : 760109764 ; Error while searching for a suitable object ; Message from user : 14 
+2024-03-21 23:54:05.115 +03:00 [INF] Message chat id : 760109764 ; User sent a message for filtering : 14 
+2024-03-21 23:54:08.102 +03:00 [ERR] Message chat id : 760109764 ; Error while searching for a suitable object ; Message from user : 14
+sd 
+2024-03-21 23:54:08.187 +03:00 [INF] Message chat id : 760109764 ; User sent a message for filtering : 14
+sd 
+2024-03-21 23:54:12.180 +03:00 [ERR] Message chat id : 760109764 ; Error while searching for a suitable object ; Message from user : 14
+null 
+2024-03-21 23:54:12.290 +03:00 [INF] Message chat id : 760109764 ; User sent a message for filtering : 14
+null 
+2024-03-21 23:54:23.507 +03:00 [INF] Message chat id : 760109764 ; The user clicked: Back
+2024-03-21 23:54:24.630 +03:00 [INF] Message chat id : 760109764 ; The user clicked: Back
+2024-03-21 23:54:28.871 +03:00 [INF] Message chat id : 760109764 ; The user clicked: Back
+2024-03-21 23:54:31.670 +03:00 [INF] Message chat id : 760109764 ; The user clicked: Filtration
+2024-03-21 23:54:34.290 +03:00 [INF] Message chat id : 760109764 ; The user clicked: MoreDetailedFiltering
+2024-03-21 23:54:35.268 +03:00 [INF] Message chat id : 760109764 ; The user clicked: UniversalFilterField_GlobalId
+2024-03-21 23:54:36.646 +03:00 [INF] Message chat id : 760109764 ; The user clicked: UniversalFilterSecondField_Id
+2024-03-21 23:54:37.992 +03:00 [INF] Message chat id : 760109764 ; The user clicked: Back
+2024-03-21 23:54:39.271 +03:00 [INF] Message chat id : 760109764 ; The user clicked: UniversalFilterField_TestDate
+2024-03-21 23:54:41.109 +03:00 [INF] Message chat id : 760109764 ; The user clicked: UniversalFilterSecondField_TestDate
+2024-03-21 23:54:53.194 +03:00 [INF] Message chat id : 760109764 ; User sent a message for filtering : 04.04.2013 
+2024-03-21 23:54:56.827 +03:00 [INF] Message chat id : 760109764 ; The user clicked: Back
+2024-03-21 23:54:57.795 +03:00 [INF] Message chat id : 760109764 ; The user clicked: UniversalFilterField_Id
+2024-03-21 23:54:59.285 +03:00 [INF] Message chat id : 760109764 ; The user clicked: UniversalFilterSecondField_TestDate
+2024-03-21 23:55:00.629 +03:00 [ERR] Message chat id : 760109764 ; Error while searching for a suitable object ; Message from user : 1
+04.04.2013 
+2024-03-21 23:55:00.762 +03:00 [INF] Message chat id : 760109764 ; User sent a message for filtering : 1
+04.04.2013 
+2024-03-21 23:55:06.194 +03:00 [INF] Message chat id : 760109764 ; User sent a message for filtering : 14
+04.04.2013 
+2024-03-21 23:56:15.771 +03:00 [INF] Message chat id : 760109764 ; The user clicked: Back
+2024-03-21 23:58:52.807 +03:00 [INF] Message chat id : 760109764 ; The user clicked: Back
+2024-03-21 23:59:09.291 +03:00 [INF] Message chat id : 760109764 ; The user clicked: Back
