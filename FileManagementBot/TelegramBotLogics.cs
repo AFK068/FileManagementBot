@@ -12,7 +12,7 @@ namespace FileManagementBot;
 internal class TelegramBotLogics
 {
     // Telegram bot token.
-    private string _telegramBotToken = "7152407194:AAF14ffPSVRlF68aZcXSj_ZXZKrpETNqSDM";
+    private string _telegramBotToken = "TOKEN";
     
     // Instance of UserInteractionProcessing for handling user interactions.
     private readonly UserInteractionProcessing _userInteractionProcessing = new UserInteractionProcessing();
